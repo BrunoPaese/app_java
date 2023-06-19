@@ -1,11 +1,14 @@
 package br.com.bruno.screenmatch.modelos;
 
 public class Serie extends Titulo {
-
     private int temporadas;
-    private int episodiosPorTemporada;
     private boolean ativa;
+    private int episodiosPorTemporada;
     private int minutosPorEpisodio;
+
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
 
     public int getTemporadas() {
         return temporadas;
@@ -15,11 +18,19 @@ public class Serie extends Titulo {
         this.temporadas = temporadas;
     }
 
-    public int getEpisodiosPorTemporada(){
+    public boolean isAtiva() {
+        return ativa;
+    }
+
+    public void setAtiva(boolean ativa) {
+        this.ativa = ativa;
+    }
+
+    public int getEpisodiosPorTemporada() {
         return episodiosPorTemporada;
     }
 
-    public void setEpisodiosPorTemporada(int episodiosPorTemporada){
+    public void setEpisodiosPorTemporada(int episodiosPorTemporada) {
         this.episodiosPorTemporada = episodiosPorTemporada;
     }
 
@@ -27,7 +38,7 @@ public class Serie extends Titulo {
         return minutosPorEpisodio;
     }
 
-    public void setMinutosPorEpisodio (int minutosPorEpisodio){
+    public void setMinutosPorEpisodio(int minutosPorEpisodio) {
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
 
@@ -36,5 +47,3 @@ public class Serie extends Titulo {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
 }
-
-

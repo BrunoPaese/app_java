@@ -3,13 +3,9 @@ package br.com.bruno.screenmatch.modelos;
 import br.com.bruno.screenmatch.calculos.Classificavel;
 
 public class Episodio implements Classificavel {
-
     private int numero;
-
     private String nome;
-
     private Serie serie;
-
     private int totalVisualizacoes;
 
     public int getTotalVisualizacoes() {
